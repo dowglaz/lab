@@ -1,0 +1,9 @@
+<% @users.each do |user| %>
+	<p>
+		<%= gravatar_for user%><br>
+		Nome: <%= user.name %><br>
+		Email: <%= user.email %><br>
+		<%= link_to "Ver perfil", user_path(user.id) %>
+	</p>
+<% end %>
+<p><%= link_to "Sign up now", signup_path %>
